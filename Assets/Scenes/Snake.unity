@@ -167,7 +167,7 @@ GameObject:
   - component: {fileID: 81103703}
   m_Layer: 0
   m_Name: Wall-right
-  m_TagString: Wall
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -305,7 +305,7 @@ GameObject:
   - component: {fileID: 244371217}
   m_Layer: 0
   m_Name: Wall-left
-  m_TagString: Wall
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -611,7 +611,7 @@ GameObject:
   - component: {fileID: 555565682}
   m_Layer: 0
   m_Name: Wall-up
-  m_TagString: Wall
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -749,7 +749,7 @@ GameObject:
   - component: {fileID: 660505949}
   m_Layer: 0
   m_Name: Wall-down
-  m_TagString: Wall
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -889,7 +889,7 @@ GameObject:
   - component: {fileID: 1171591797}
   m_Layer: 0
   m_Name: Food
-  m_TagString: Untagged
+  m_TagString: Food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1298,6 +1298,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Snake
   segmentPrefab: {fileID: 167541318114381693, guid: ea4edec488132ff46a45bcc307e44dd8, type: 3}
+  initialLength: 4
   moveInterval: 0.05
 --- !u!114 &1823177722
 MonoBehaviour:
