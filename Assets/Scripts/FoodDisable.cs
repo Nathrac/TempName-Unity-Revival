@@ -5,9 +5,12 @@ public class FoodDisable : MonoBehaviour
 {
     public static event Action foodEaten;
 
-    private void OnDisable()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        foodEaten?.Invoke();
+        if (collision.tag == "Player")
+        {
+            foodEaten?.Invoke();
+        }
     }
 
 }
