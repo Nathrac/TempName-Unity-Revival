@@ -1,2 +1,2 @@
-# TempName Unity Revival
-A repository for a project I'll make in Unity to relearn the environment. What is it? I got no clue yet hehe
+# Unity2D Project - Snake
+Recreating the classic game Snake using Unity to learn more about the 2D development tools Unity has to offer. 
