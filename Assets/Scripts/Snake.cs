@@ -21,13 +21,11 @@ public class Snake : MonoBehaviour
     private void OnEnable()
     {
         FoodDisable.foodEaten += Grow;
-        Debug.Log("Enabled");
     }
 
     private void OnDisable()
     {
         FoodDisable.foodEaten -= Grow;
-        Debug.Log("Disabled");
     }
 
     private void FixedUpdate()
@@ -36,7 +34,7 @@ public class Snake : MonoBehaviour
 
         if (moveTimer >= moveInterval)
         {
-            for (int i = segments.Count - 1; i > 0; i--)
+            for (int i = segments.Count - 1; i > 0; i--) //Move the tail first and work up to the head
             {
                 segments[i].position = segments[i - 1].position;
             }
@@ -53,7 +51,7 @@ public class Snake : MonoBehaviour
     private void OnMove(InputValue value)
     {
         Vector2 input = value.Get<Vector2>();
-        if (input.x != 0 && input.y != 0) return;
+        if (input.x != 0 && input.y != 0) return; // Prevents angled movement by pressing two keys at once like A & W.
 
         if (input != -currentDirection && input != Vector2.zero)
         {

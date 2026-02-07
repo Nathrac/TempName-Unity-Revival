@@ -21,10 +21,25 @@ public class Food : MonoBehaviour
     private void RandomPosition()
     {
         Bounds bounds = gridArea.bounds;
+        float x, y;
+        
+        do
+        {
+            x = Random.Range(bounds.min.x, bounds.max.x);
+            y = Random.Range(bounds.min.y, bounds.max.y);
+            Collider[] intersect = CheckPosition(new Vector3(x,y,0.0f));
 
-        float x = Random.Range(bounds.min.x, bounds.max.x);
-        float y = Random.Range(bounds.min.y, bounds.max.y);
+            if (intersect.Length == 0){
+                break;
+            }
+
+        } while (true);
 
         transform.position = new Vector3(Mathf.Round(x), Mathf.Round(y), 0.0f);
+    }
+
+    private Collider[] CheckPosition(Vector3 position)
+    {
+        return Physics.OverlapSphere(position, 0.01f);
     }
 }
